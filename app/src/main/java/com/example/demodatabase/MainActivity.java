@@ -61,14 +61,19 @@ public class MainActivity extends AppCompatActivity {
 
                 // Insert a task
                 ArrayList<String> data = db.getTaskContent();
+                ArrayList<String> newdata = db.getTaskContent();
+
                 tasks = db.getTasks();
 
                 db.close();
 
                 String txt = "";
+
+                tasks.clear();
+
                 for (int i = 0; i < data.size(); i++) {
-                    Log.d("Database Content", i + ". " + data.get(i));
-                    txt += i + ". " + data.get(i) + "\n";
+                    Log.d("Database Content", i + ". " + newdata.get(i));
+                    txt += i + ". " + newdata.get(i) + "\n";
                 }
 
                 aa.notifyDataSetChanged();
