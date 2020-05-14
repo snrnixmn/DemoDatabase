@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
                 // Insert a task
                 db.insertTask("Submit RJ", "25 Apr 2016");
                 db.close();
+
+                aa.notifyDataSetChanged();
             }
         });
 
